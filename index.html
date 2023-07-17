@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Whatssup chat app</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+        <link rel="stylesheet" href="/style.css">
+    </head>
+    <body>
+        <section class="chat_section">
+            <div class="brand">
+                <!-- <img height="40" src="/texting.png" alt="2"> -->
+                <a href="http://localhost:3000/">
+                    <img src="/back_img.png" height="40" alt="Back" class="back-icon">
+                  </a>
+                <h1>Whatssup</h1>
+                <!-- <button id="theme-toggle">Toggle Theme</button> -->
+                <span id="theme-toggle" class="theme-toggle"><i class="fas fa-adjust"></i></span>
+            </div>
+            <div class="message_area">
+            </div>
+            <div>
+                <textarea id="textarea" cols="30" rows="1" placeholder="Write a message ."></textarea>
+            </div>
+        </section>
+        <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="/client.js"></script>
+    </body>
+</html>

@@ -1,0 +1,162 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-family: "Montserrat-Black";
+    background-color: #f2f2f2;
+  }
+
+  /* Header styles */
+  header {
+    /* background-color: #333; */
+    padding: 20px;
+    color: #fff;
+    display: flex;
+    align-items: center; /* Align items vertically within the flex container */
+    justify-content: unset; /* Distribute items horizontally with space between them */
+  }
+  .container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    align-items: flex-start; /* Align items to the top */ /* Align items vertically within the flex container */
+  }
+  .container_text
+  {
+    display: block;
+    align-self: auto;
+    padding-top: 50px;
+  }
+  .container_text_h2
+  {
+    font-size: 3rem;
+    font-family: Arial, Helvetica;
+    font-weight: bold;
+  }
+  .container_text_p
+  {
+    padding-top: 20px;
+    text-align: justify;
+    line-height: 20cap;
+  }
+  .phone_img {
+    width: 200px;
+    margin-right: 20px;
+    padding-left: 20px;
+    height: 450px;
+    width: 300px;
+    border-radius: 5px;
+  }
+
+  /* Navigation styles */
+  .nav_bar
+  {
+    margin-right: 0%;
+    margin-left: 780px;
+  }
+  .nav_bar_img
+  {
+    padding-right: 18px;
+  }
+  nav ul {
+    list-style-type: none;
+    display: flex;
+  }
+
+  nav ul li {
+    margin: 0 10px;
+  }
+
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 4px;
+  }
+
+  nav ul li a:hover {
+    background-color: #555;
+  }
+
+/* Add the following styles to align the items in one row */
+#features .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .fea {
+    flex-basis: calc(33.33% - 20px); /* Adjust the flex-basis value as needed */
+    margin-bottom: 20px;
+  }
+  
+  /* Optional: Add any additional styles as needed */
+  
+
+
+#testimonials
+{
+    text-align: center;
+    background-color: #ef8172;
+    color: #fff;
+}
+.testimonials_img
+{
+    width: 10%;
+    border-radius: 100%;
+    margin: 20px;
+    
+}
+/* .carousel-item
+{
+    padding: 7% 15%;
+} */
+
+
+
+#cta
+{
+    background-color: #ff4d4d;
+    padding-top:  50px;
+    padding-bottom: 10px;
+    align-items: center;
+}
+.cta_h3
+{
+    text-align: center;
+    font-family: "Montserrat-Black";
+    color: #fff;
+    font-size: 2.5rem;
+}
+
+/* copyright */
+#footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
+  
+  /* Optional: Add any additional styles as needed */
+  
+.footer
+{
+    margin: 20px;
+}
+.footer_par
+{
+    font-size: 1.3rem;
+}
+
+.Download-Button
+{
+    margin: 5% 3% 5% 0%;
+}
