@@ -13,6 +13,7 @@ http.listen(PORT, () =>
 app.use(express.static(__dirname+'/public'))
 app.get('/',(req, res) => {
     res.sendFile(__dirname + '/home.html')
+
 })
 app.get('/chat',(req, res) => {
     res.sendFile(__dirname + '/index.html')
@@ -20,17 +21,23 @@ app.get('/chat',(req, res) => {
 app.get('/contact',(req, res) => {
     res.sendFile(__dirname + '/contact.html')
 })
-// app.get('/home',(req, res) => {
-//     res.sendFile(__dirname + '/home.html')
-// })
-//Socket
 
 const io = require('socket.io')(http)
+
 
 io.on('connection', (socket) =>{
     console.log('Connected...')
     socket.on('message', (msg) => {
         socket.broadcast.emit('message', msg)
+    })
+    socket.on('new-user', name => {
+      // Broadcast the message to all other users except the sender
+      console.log("new user joined");
+      socket.broadcast.emit('user-joined', name);
+    });
+    socket.on('disconnect', name => {
+      console.log("user left");
+      socket.broadcast.emit('left', name);
     })
 })
 

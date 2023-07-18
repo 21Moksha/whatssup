@@ -10,6 +10,27 @@ do{
     name= prompt('Please enter your name: ')
 }while(!name)
 
+socket.emit('new-user', name)
+socket.on('user-joined', (name) => {
+    const message = `${name} has joined the chat`;
+    let msg={
+        user: 'System',
+        message: message
+    }
+    // Display the message to notify other users
+    appendMessage(msg, 'system_msg');
+  });
+  socket.on('left', (name) => {
+    const message = `User has left the chat`;
+    let msg={
+        user: 'System',
+        message: message
+    }
+    // Display the message to notify other users
+    appendMessage(msg, 'system_msg');
+  });
+  
+  
 textarea.addEventListener('keyup', (e) =>{
     if(e.key==='Enter'){
         sendMessage(e.target.value)

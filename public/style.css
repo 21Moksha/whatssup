@@ -97,6 +97,12 @@ textarea
     color: #787986;
     margin-left: auto;
 }
+.system_msg
+{
+    background: grey;
+    color: #ffffff;
+    align-self: center;
+}
 
 .message h4{
     position: absolute;
